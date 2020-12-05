@@ -1,31 +1,35 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App - dev-heartstore
 
+
+# Triggers when code is pushed to the master branch
 on:
   push:
     branches:
       - main
 
+# List of tasks that happen during the workflow
 jobs:
   build-and-deploy:
     runs-on: windows-latest
 
+# Fetches the repo
     steps:
     - uses: actions/checkout@master
 
+# Checks the node.js version
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
         node-version: '12.13.0'
 
+# Runs npm install and npm run build+test
     - name: npm install, build, and test
       run: |
         npm install
         npm run build --if-present
         npm run test --if-present
 
+# Deploys the code to the Azure web app
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
