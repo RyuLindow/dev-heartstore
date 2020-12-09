@@ -7,6 +7,9 @@ import jQuery from 'jquery'
 
 window.$ = window.jQuery = jQuery
 
+//Vue.compontent('MainNav', require('./components/MainNav.vue').default);
+
+
 Vue.config.productionTip = false
 
 new Vue({

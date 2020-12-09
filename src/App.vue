@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <Home msg="Umbraco Heartcore demo"/>
+    <MainNav></MainNav>
+    <Footer></Footer>
+
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import MainNav from './components/MainNav.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Home
+    MainNav,
+    Footer
   }
 }
 </script>
