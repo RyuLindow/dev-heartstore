@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+      
+
+    <button class="btn btn-primary">Don't</button>
   </div>
 </template>
 
