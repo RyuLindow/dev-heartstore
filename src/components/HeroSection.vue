@@ -1,5 +1,5 @@
 <template>
-    <div class="hero bkgd-white">
+    <div class="hero">
         <div class="container h-100">
           <div class="row h-100 justify-content-center align-items-center">
             <div class="col-md-5">
@@ -35,11 +35,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "/src/assets/vars.scss";
   .hero{
     padding-top: 7rem;
     width: 100%;
     height: 500px;
     text-align: left;
+    background-color: $White;
   }
 
   .hero-image {

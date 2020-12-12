@@ -1,8 +1,8 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Heartstore</a>
+                <img class="logo-image" src="/images/heartstore_logo.png" alt="heartcore logo gif">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,5 +33,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "/src/assets/vars.scss";
+.navbar {
+    background-color: $Beige;
+}
+.logo-image {
+    width: 24vh;
+    padding-top: 0;
+    margin: -4rem 2rem 0 1rem;
+}
 
 </style>
