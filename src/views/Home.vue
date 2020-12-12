@@ -1,16 +1,24 @@
 <template>
-  <div>
-    This is Home
+  <div class="home">
+    <HeroSection></HeroSection>
+    <LearnMoreSection></LearnMoreSection>
   </div>
 </template>
 
+
 <script>
+import HeroSection from '@/components/HeroSection.vue'
+import LearnMoreSection from '@/components/LearnMoreSection.vue'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HeroSection,
+    LearnMoreSection
+  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
 </style>

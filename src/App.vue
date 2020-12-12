@@ -1,25 +1,23 @@
 <template>
   <div id="app">
     <MainNav></MainNav>
-    <HeroSection></HeroSection>
-    <LearnMoreSection></LearnMoreSection>
-    <Footer></Footer>
 
+<!--Basically a render body equivalent for Vue-->
+    <router-view />
+
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import MainNav from './components/MainNav.vue'
-import HeroSection from './components/HeroSection.vue'
-import LearnMoreSection from './components/LearnMoreSection.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
+
   components: {
     MainNav,
-    HeroSection,
-    LearnMoreSection,
     Footer
   }
 }

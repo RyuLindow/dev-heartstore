@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="merch">
+    <h1>This is the merch page</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 <script>
 
 export default {
-  name: 'About',
+  name: 'Merch',
   components: {
   }
 }
@@ -17,3 +17,4 @@ export default {
 <style scoped lang="scss">
 
 </style>
+

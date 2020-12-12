@@ -8,10 +8,11 @@
                   Learn more about Heartstore
                 </h1>
                 <p>
-                  This demo was built using Umbraco Heartcore. A headless version of the Umbraco CMS made for projects with multiple frontends
+                  This demo was built using Umbraco Heartcore. A headless version of the Umbraco CMS allows you to show your content on different platform with only one backoffice!
+                  That way, you can manage it one in one place and your editors will have a much easier time working with content.
                 </p>
-                <div class="hero-btn mt-5">
-                    <button class="btn btn-outline-secondary">About this demo</button>
+                <div class="hero-btn">
+                    <button class="btn btn-outline-secondary"><router-link class="btn-blue" to="/about">About this demo</router-link></button>
                 </div>
               </div>
             </div>
@@ -34,30 +35,37 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "/src/assets/vars.scss";
-  .learn-more{
-    padding: 4rem 0 6rem 0;
-    width: 100%;
-    text-align: left;
-    background-color: $white;
-  }
 
-  .learn-more__image {
-    width: 12vw;
-  }
+.learn-more{
+  padding: 4rem 0 6rem 0;
+  width: 100%;
+  text-align: left;
+  background-color: $white;
+}
 
-  .btn {
-    margin-bottom: 1rem;
-  }
+.learn-more__image {
+  width: 12vw;
+}
 
-  .btn-outline-secondary {
-    background-color: $white;
-    border-color: $lightblue;
-    color: $lightblue;
-  }
+.btn {
+  margin-bottom: 1rem;
+}
 
-  .btn-outline-secondary:hover {
-    background-color: $beige;
-    border-color: $blue;
-    color: $blue;
-  }
+.btn-outline-secondary {
+  background-color: $white;
+  border-color: $lightblue;
+}
+
+.btn-outline-secondary:hover {
+  background-color: $beige;
+  border-color: $blue;
+}
+
+.btn-blue {
+  color: $blue;
+}
+
+.btn-blue:hover {
+  text-decoration: none;
+}
 </style>

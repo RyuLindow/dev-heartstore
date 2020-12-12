@@ -11,8 +11,8 @@
                   The #umbazing Umbraco Merch only here at Umbraco Heartstore!
                   T-shirts, hoodies, socks, and other goodies can be found here, so give it a look 😊
                 </p>
-                <div class="hero-btn mt-5">
-                    <button class="btn btn-info mr-4">Umbraco Merch</button>
+                <div class="hero-btn">
+                  <button class="btn btn-info"><router-link class="btn-white" to="/about">Umbraco Merch</router-link></button>
                 </div>
               </div>
             </div>
@@ -35,38 +35,38 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "/src/assets/vars.scss";
-  .hero{
-    padding: 4rem 0 4rem 0;
-    width: 100%;
-    text-align: left;
-    background-color: $white;
-  }
 
-  .hero-image {
-    width: 12vw;
-  }
+.hero{
+  padding: 4rem 0 4rem 0;
+  width: 100%;
+  text-align: left;
+  background-color: $white;
+}
 
-  .btn {
-    margin-bottom: 1rem;
-  }
+.hero-image {
+  width: 12vw;
+}
 
-  .btn-info {
-    background-color: $blue;
-    border-color: $blue;
-  }
-    .btn-info:hover {
-    background-color: $lightblue;
-  }
+.btn {
+  margin-bottom: 1rem;
+}
 
-  .btn-outline-secondary {
-    background-color: $white;
-    border-color: $lightblue;
-    color: $lightblue;
-  }
+.btn-info {
+  background-color: $blue;
+  border-color: $lightblue;
+}
 
-  .btn-outline-secondary:hover {
-    background-color: $beige;
-    border-color: $blue;
-    color: $blue;
-  }
+.btn-info:hover {
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.btn-white {
+  color: $white;
+}
+
+.btn-white:hover {
+  color: $beige;
+  text-decoration: none;
+}
 </style>
