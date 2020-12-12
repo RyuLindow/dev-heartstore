@@ -35,12 +35,13 @@ export default {
 <style scoped lang="scss">
 @import "/src/assets/vars.scss";
 .navbar {
-    background-color: $Beige;
+    background-color: $beige;
+    margin: 1rem;
 }
 .logo-image {
     width: 24vh;
     padding-top: 0;
-    margin: -4rem 2rem 0 1rem;
+    margin: -3.2rem 2.4rem 0 1rem;
 }
 
 </style>

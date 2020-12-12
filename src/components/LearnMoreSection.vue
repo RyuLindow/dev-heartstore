@@ -1,24 +1,23 @@
 <template>
-    <div class="hero">
+    <div class="learn-more">
         <div class="container h-100">
           <div class="row h-100 justify-content-center align-items-center">
             <div class="col-md-5">
               <div class="hero-content">
                 <h1 class="hero-title">
-                  Umbraco Heartstore
+                  Learn more about Heartstore
                 </h1>
                 <p>
-                  The #umbazing Umbraco Merch only here at Umbraco Heartstore!
-                  T-shirts, hoodies, socks, and other goodies can be found here, so give it a look 😊
+                  This demo was built using Umbraco Heartcore. A headless version of the Umbraco CMS made for projects with multiple frontends
                 </p>
                 <div class="hero-btn mt-5">
-                    <button class="btn btn-info mr-4">Umbraco Merch</button>
+                    <button class="btn btn-outline-secondary">About this demo</button>
                 </div>
               </div>
             </div>
             <div class="col-md-7">
                 <div>
-                    <img class="hero-image" src="/images/heartcore.gif" alt="heartcore logo gif">
+                    <img class="learn-more__image" src="/images/headless_blue_arrows.png" alt="heartcore omnichannel">
                 </div>
             </div>
           </div>
@@ -28,34 +27,26 @@
 
 <script>
 export default {
-  name: "HeroSection"
+  name: "LearnMoreSection"
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "/src/assets/vars.scss";
-  .hero{
-    padding: 4rem 0 4rem 0;
+  .learn-more{
+    padding: 4rem 0 6rem 0;
     width: 100%;
     text-align: left;
     background-color: $white;
   }
 
-  .hero-image {
+  .learn-more__image {
     width: 12vw;
   }
 
   .btn {
     margin-bottom: 1rem;
-  }
-
-  .btn-info {
-    background-color: $blue;
-    border-color: $blue;
-  }
-    .btn-info:hover {
-    background-color: $lightblue;
   }
 
   .btn-outline-secondary {
