@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <MainNav></MainNav>
+    <hr class="featurette-divider">
 
 <!--Basically a render body equivalent for Vue-->
     <router-view />

@@ -9,4 +9,41 @@ body{
     cursor: pointer;
 }
 
+/*ABOUT PAGE*/
 
+.about-section {
+    margin: 0 10%;
+    width: 80%;
+    padding: 2rem 0;
+}
+
+
+.featurette-divider {
+    margin: 2rem 0 1rem 0;
+  }
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    /* rtl:remove */
+    letter-spacing: -.05rem;
+  }
+
+
+  
+  
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+  
+@media (min-width: 40em) {
+  
+.featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+@media (min-width: 62em) {
+.featurette-heading {
+      margin-top: 7rem;
+    }
+  }
