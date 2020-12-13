@@ -1,11 +1,7 @@
 <template>
   <div class="merch-item">
-
     <div class="container">
       <div class="row">
-
-
-
 
         <div class="card" style="width: 18rem;">
             <img src="/images/heartcore_omnichannell.gif" class="card-img-top" alt="...">
@@ -57,9 +53,5 @@ export default {
 
 <style scoped lang="scss">
 @import "/src/assets/vars.scss";
-
-.merch-item {
-
-}
 
 </style>

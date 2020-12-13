@@ -24,5 +24,9 @@ export default {
 <style scoped lang="scss">
 @import "/src/assets/vars.scss";
 
+.merch {
+  background-color: $white;
+}
+
 </style>
 
