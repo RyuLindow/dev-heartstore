@@ -1,7 +1,9 @@
 <template>
   <div class="merch">
     <div class="merch-section">
-
+        <h1 class="featurette-heading">Umbraco Heartstore</h1>
+        <p class="lead">The only place to get your Umbraco Merch! Take a look at what we have 😉
+        </p>
 
     <MerchItem></MerchItem>
         </div>
@@ -31,6 +33,10 @@ export default {
 .merch-section {
   width: 80%;
   margin: 0 10%;
+}
+
+.featurette-heading {
+  padding-top: 2rem;
 }
 
 </style>

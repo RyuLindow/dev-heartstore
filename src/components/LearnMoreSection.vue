@@ -7,7 +7,7 @@
                 <h1 class="hero-title">
                   Learn more about Heartstore
                 </h1>
-                <p>
+                <p class="lead">
                   This demo was built using Umbraco Heartcore. A headless version of the Umbraco CMS allows you to show your content on different platform with only one backoffice!
                   That way, you can manage it one in one place and your editors will have a much easier time working with content.
                 </p>
@@ -41,6 +41,10 @@ export default {
   width: 100%;
   text-align: left;
   background-color: $white;
+}
+
+.hero-title {
+  color: $blue;
 }
 
 .learn-more__image {

@@ -7,7 +7,7 @@
                 <h1 class="hero-title">
                   Umbraco Heartstore
                 </h1>
-                <p>
+                <p class="lead">
                   The #umbazing Umbraco Merch only here at Umbraco Heartstore!
                   T-shirts, hoodies, socks, and other goodies can be found here, so give it a look 😊
                 </p>
@@ -41,6 +41,10 @@ export default {
   width: 100%;
   text-align: left;
   background-color: $white;
+}
+
+.hero-title {
+  color: $blue;
 }
 
 .hero-image {
