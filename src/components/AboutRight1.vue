@@ -14,7 +14,7 @@
         </p>
         </div>
       <div class="col-md-5 order-md-1">
-        <img class="featurette-image img-fluid mx-auto" src="/images/heartcore.gif" width="500" height="500" aria-label="">
+        <img class="featurette-image img-fluid mx-auto" src="/images/heartcore_omnichannel.gif" width="500" height="500" aria-label="">
       </div>
     </div>
   </div>

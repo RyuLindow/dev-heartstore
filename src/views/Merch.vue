@@ -1,11 +1,10 @@
 <template>
   <div class="merch">
-    <h1>This is the merch page</h1>
-    <a href="https://getbootstrap.com/docs/5.0/layout/grid/">Grid</a>
-    <br>
-    <a href="https://getbootstrap.com/docs/5.0/content/figures/">Figures</a>
+    <div class="merch-section">
+
 
     <MerchItem></MerchItem>
+        </div>
   </div>
 </template>
 
@@ -26,6 +25,12 @@ export default {
 
 .merch {
   background-color: $white;
+  padding-bottom: 4rem;
+}
+
+.merch-section {
+  width: 80%;
+  margin: 0 10%;
 }
 
 </style>
