@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mainnav">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <router-link to="/"><img class="logo-image" src="/images/heartstore_logo.png" alt="heartcore logo gif"></router-link>
@@ -42,6 +42,12 @@ export default {
     background-color: $beige;
     margin: 1rem;
 }
+
+.mainnav {
+    width: 80%;
+    margin: 0 10%;
+}
+
 .logo-image {
     width: 24vh;
     padding-top: 0;

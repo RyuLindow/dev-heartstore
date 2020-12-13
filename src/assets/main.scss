@@ -9,25 +9,55 @@ body{
     cursor: pointer;
 }
 
+
+/*GENERAL REUSABLE STYLING CLASSES*/
+
+.text-align--left {
+  text-align: left;
+}
+
+.text-align--right {
+  text-align: right;
+}
+
+.list-icon {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+.list-icon li::before {
+  content: url('/images/heartcore.ico');
+  margin-right: 0.4rem;
+}
+
+
 /*ABOUT PAGE*/
 
 .about-section {
-    margin: 0 10%;
-    width: 80%;
+    margin: 0 18%;
+    width: 64%;
     padding: 2rem 0;
 }
 
 
 .featurette-divider {
     margin: 2rem 0 1rem 0;
-  }
+}
 
 .featurette-heading {
     font-weight: 300;
     line-height: 1;
     /* rtl:remove */
     letter-spacing: -.05rem;
-  }
+}
+
+.text-muted {
+  color: $lightblue !important;
+}
+
+.featurette-heading {
+  color: $blue !important;
+}
 
 
   

@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-7">
                 <div>
-                    <img class="hero-image" src="/images/heartcore.gif" alt="heartcore logo gif">
+                  <img class="featurette-image img-fluid mx-auto" src="/images/heartcore.gif" width="360" height="360" aria-label="">
                 </div>
             </div>
           </div>

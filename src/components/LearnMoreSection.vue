@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-7">
                 <div>
-                    <img class="learn-more__image" src="/images/headless_blue_arrows.png" alt="heartcore omnichannel">
+                    <img class="featurette-image img-fluid mx-auto" src="/images/headless_blue_arrows.png" width="360" height="360" aria-label="heartcore omnichannel">
                 </div>
             </div>
           </div>
