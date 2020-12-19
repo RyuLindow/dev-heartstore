@@ -21,13 +21,8 @@ export default {
     LearnMoreSection
   },
   mounted() {
-    axios.get('https://cdn.umbraco.io/content/f1f50fa1-6686-4b03-aa9f-e412bace07ea')
-    .then( function() {
-      console.log('Data: ')
-    })
-    .catch( function(){
-      console.log('get home data failed')
-    })
+    axios.get('https://cdn.umbraco.io/content/ebd19dc8-1ee7-4505-ab4d-cd0797d6a62d')
+  .then(data => console.log(data))
   }
 }
 </script>

@@ -5,6 +5,15 @@ import './assets/main.scss'
 import jQuery from 'jquery'
 import 'bootstrap'
 import 'popper.js'
+import axios from 'axios'
+
+
+// Global GEt header for Axios
+axios.defaults.headers.get['umb-project-alias'] = 'dev-heartstore'
+axios.defaults.headers.get['Accept-Language'] = 'en-US'
+
+
+
 
 
 window.$ = window.jQuery = jQuery;
