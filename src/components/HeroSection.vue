@@ -12,7 +12,7 @@
                   T-shirts, hoodies, socks, and other goodies can be found here, so give it a look 😊
                 </p>
                 <div class="hero-btn">
-                  <button class="btn btn-info"><router-link class="btn-white" to="/about">Umbraco Merch</router-link></button>
+                  <button class="btn btn-info"><router-link class="btn-white" to="/merch">Umbraco Merch</router-link></button>
                 </div>
               </div>
             </div>

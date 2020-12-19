@@ -10,6 +10,7 @@
 
 
 <script>
+import axios from 'axios'
 import HeroSection from '@/components/HeroSection.vue'
 import LearnMoreSection from '@/components/LearnMoreSection.vue'
 
@@ -18,6 +19,15 @@ export default {
   components: {
     HeroSection,
     LearnMoreSection
+  },
+  mounted() {
+    axios.get('https://cdn.umbraco.io/content/f1f50fa1-6686-4b03-aa9f-e412bace07ea')
+    .then( function() {
+      console.log('Data: ')
+    })
+    .catch( function(){
+      console.log('get home data failed')
+    })
   }
 }
 </script>
