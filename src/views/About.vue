@@ -7,6 +7,7 @@
 
 
 <script>
+import axios from 'axios'
 import AboutLeft1 from '@/components/AboutLeft1.vue'
 import AboutRight1 from '@/components/AboutRight1.vue'
 
@@ -15,6 +16,13 @@ export default {
   components: {
     AboutLeft1,
     AboutRight1
+  },
+    mounted() {
+    axios.get('https://cdn.umbraco.io/content/4ca57f73-a25e-44da-be9c-489fee1c5c03')
+        .then(response => console.log(response))
+        .catch(error => {
+        console.log(error, 'Failed getting the API data from the About page');
+    });
   }
 }
 </script>

@@ -56,8 +56,17 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-    name: 'MerchItem'
+    name: 'MerchItem',
+
+    mounted() {
+    axios.get('https://cdn.umbraco.io/content/f1f50fa1-6686-4b03-aa9f-e412bace07ea')
+        .then(response => console.log(response))
+        .catch(error => {
+        console.log(error, 'Failed getting the API data from the Merch page');
+    });
+  }
 }
 </script>
 

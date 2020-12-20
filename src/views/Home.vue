@@ -5,6 +5,7 @@
         </p>
     <HeroSection></HeroSection>
     <LearnMoreSection></LearnMoreSection>
+    <p>{{ APIdata }}</p>
   </div>
 </template>
 
@@ -20,11 +21,20 @@ export default {
     HeroSection,
     LearnMoreSection
   },
-  mounted() {
+  data() {
+    return {
+      APIdata: null,
+    }
+  },
+    mounted() {
     axios.get('https://cdn.umbraco.io/content/ebd19dc8-1ee7-4505-ab4d-cd0797d6a62d')
-  .then(data => console.log(data))
+      .then(response => console.log(response))
+      .catch(error => {
+        console.log(error, 'Failed getting the API data from the Home page');
+      });
   }
 }
+
 </script>
 
 <style scoped lang="scss">

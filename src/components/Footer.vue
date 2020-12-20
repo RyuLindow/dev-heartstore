@@ -39,8 +39,8 @@ ul li:nth-child(odd) {
   color: $white;
 
 }
-  .footer__link:hover {
+
+.footer__link:hover {
     color: $beige;
-    font-size: 1.1rem;
   }
 </style>
