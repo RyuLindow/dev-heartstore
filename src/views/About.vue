@@ -19,7 +19,7 @@ export default {
   },
     mounted() {
     axios.get('https://cdn.umbraco.io/content/4ca57f73-a25e-44da-be9c-489fee1c5c03')
-        .then(response => console.log(response))
+        .then(response => console.log(response.data))
         .catch(error => {
         console.log(error, 'Failed getting the API data from the About page');
     });

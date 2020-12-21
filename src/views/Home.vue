@@ -1,11 +1,9 @@
 <template>
   <div class="home">
-      <h1 class="featurette-heading">Umbraco Heartstore</h1>
-        <p class="lead">The e-commerce web app demo built with <span class="text-muted">Umbraco Heartcore</span> and <span class="text-muted">Vue.js</span>
-        </p>
+      <h1 class="featurette-heading">{{APIdata.welcomeTitle}}</h1>
+        <p class="lead">The e-commerce web app demo built with <span class="text-muted">Umbraco Heartcore</span> and <span class="text-muted">Vue.js</span></p>
     <HeroSection></HeroSection>
     <LearnMoreSection></LearnMoreSection>
-    <p>{{ APIdata }}</p>
   </div>
 </template>
 
@@ -23,12 +21,15 @@ export default {
   },
   data() {
     return {
-      APIdata: null,
+      APIdata: [],
     }
   },
     mounted() {
     axios.get('https://cdn.umbraco.io/content/ebd19dc8-1ee7-4505-ab4d-cd0797d6a62d')
-      .then(response => console.log(response))
+      .then((response) => {
+        this.APIdata = response.data;
+        console.log(response.data)
+      })
       .catch(error => {
         console.log(error, 'Failed getting the API data from the Home page');
       });

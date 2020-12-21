@@ -8,12 +8,34 @@
       <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/umbraco-heartcore-pricing/">Umbraco Heartcore Pricing</a></li>
       <li class="list-group-item"><a class="footer__link" href="https://our.umbraco.com/documentation/Umbraco-Heartcore/">Umbraco Heartcore Documentation</a></li>
     </ul>
+<!--
+  Renders Nested Content links
+    <ul class="list-group" v-for="link in APIdata.nestedLinks " :key="link">
+      <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/products/umbraco-heartcore/free-intro-to-umbraco-heartcore/">{{link}}</a></li>
+    </ul>
+-->
+
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      APIdata: [],
+    }
+  },
+    mounted() {
+    axios.get('https://cdn.umbraco.io/content/ebd19dc8-1ee7-4505-ab4d-cd0797d6a62d')
+      .then((response) => {
+        this.APIdata = response.data;
+      })
+      .catch(error => {
+        console.log(error, 'Failed getting the API data from the Home page');
+      });
+  }
 }
 </script>
 
