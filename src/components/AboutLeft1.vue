@@ -3,18 +3,10 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading text-align--left">Built in Vue.js <span class="text-muted">using Umbraco Heartcore as backoffice.</span></h2>
-        <p class="lead text-align--left">This web app is in constant development and will be updated as the time goes.
-          <br>
-          Here's a list of things and features that will be added in the future:
+        <h2 class="featurette-heading text-align--left">{{APIdata.upperHeroTitle}}</h2>
+        <p class="lead text-align--left">{{APIdata.upperHeroText}}
           <ul class="list-icon">
-            <li>Code snippet examples</li>
-            <li>Detailed tutorial on <a href="https://our.umbraco.com/documentation/Umbraco-Heartcore/">our.umbraco.com</a></li>
-            <li>Dynamic sections</li>
-            <li>Dynamic menu</li>
-            <li>Dynamic colors</li>
-            <li>Omnichannel</li>
-            <li>And more!</li>
+            <li  v-for="listItem in APIdata.upperHeroListItems" :key="listItem">{{listItem}}</li>
           </ul>
         </p>
         </div>
@@ -27,8 +19,23 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-    name: 'AboutLeft1'
+  name: 'AboutLeft1',
+  data() {
+    return {
+      APIdata: [],
+    }
+  },
+    mounted() {
+    axios.get('https://cdn.umbraco.io/content/4ca57f73-a25e-44da-be9c-489fee1c5c03')
+      .then((response) => {
+        this.APIdata = response.data;
+      })
+      .catch(error => {
+        console.log(error, 'Failed getting the API data from the Home page');
+      });
+  }
 }
 </script>
 

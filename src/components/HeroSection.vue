@@ -5,19 +5,20 @@
             <div class="col-md-5">
               <div class="hero-content">
                 <h1 class="hero-title">
-                  Umbraco Heartstore
+                  {{APIdata.upperTitle}}
                 </h1>
                 <p class="lead">
-                  The #umbazing Umbraco Merch only here at Umbraco Heartstore!
-                  T-shirts, hoodies, socks, and other goodies can be found here, so give it a look 😊
+                    {{APIdata.upperText}}
                 </p>
                 <div class="hero-btn">
-                  <button class="btn btn-info"><router-link class="btn-white" to="/merch">Umbraco Merch</router-link></button>
+                  <!-- {{APIdata.upperButtonLink}} - parameter to get the button link-->
+                  <button class="btn btn-info"><router-link class="btn-white" to="/merch">{{APIdata.upperButtonText}}</router-link></button>
                 </div>
               </div>
             </div>
             <div class="col-md-7">
                 <div>
+                  <!--{{APIdata.upperImage.umbracoFile.src}} - parameter to get the image source-->
                   <img class="featurette-image img-fluid mx-auto" src="/images/heartcore.gif" width="360" height="360" aria-label="">
                 </div>
             </div>
@@ -27,9 +28,24 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: "HeroSection"
-};
+  name: 'HeroSection',
+  data() {
+    return {
+      APIdata: [],
+    }
+  },
+    mounted() {
+    axios.get('https://cdn.umbraco.io/content/ebd19dc8-1ee7-4505-ab4d-cd0797d6a62d')
+      .then((response) => {
+        this.APIdata = response.data;
+      })
+      .catch(error => {
+        console.log(error, 'Failed getting the API data from the Home page');
+      });
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

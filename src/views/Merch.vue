@@ -1,8 +1,8 @@
 <template>
   <div class="merch">
     <div class="merch-section">
-        <h1 class="featurette-heading">Umbraco Heartstore</h1>
-        <p class="lead">The only place to get your Umbraco Merch! Take a look at what we have 😉
+        <h1 class="featurette-heading">{{APIdata.welcomeTitle}}</h1>
+        <p class="lead">{{APIdata.welcomeText}}
         </p>
 
     <MerchItem></MerchItem>
@@ -12,12 +12,27 @@
 
 
 <script>
+import axios from 'axios'
 import MerchItem from '@/components/MerchItem.vue'
-
 export default {
   name: 'Merch',
   components: {
     MerchItem
+  },
+  data() {
+    return {
+      APIdata: [],
+    }
+  },
+    mounted() {
+    axios.get('https://cdn.umbraco.io/content/f1f50fa1-6686-4b03-aa9f-e412bace07ea')
+        .then((response) => {
+        this.APIdata = response.data;
+        console.log(response.data)
+      })
+      .catch(error => {
+        console.log(error, 'Failed getting the API data from the Home page');
+      });
   }
 }
 </script>

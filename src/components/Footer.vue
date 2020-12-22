@@ -8,12 +8,11 @@
       <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/umbraco-heartcore-pricing/">Umbraco Heartcore Pricing</a></li>
       <li class="list-group-item"><a class="footer__link" href="https://our.umbraco.com/documentation/Umbraco-Heartcore/">Umbraco Heartcore Documentation</a></li>
     </ul>
-<!--
+
   Renders Nested Content links
-    <ul class="list-group" v-for="link in APIdata.nestedLinks " :key="link">
-      <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/products/umbraco-heartcore/free-intro-to-umbraco-heartcore/">{{link}}</a></li>
+    <ul class="list-group">
+      <li class="list-group-item"  v-for="link in APIdata.nestedLinks" :key="link"><a class="footer__link" href="https://umbraco.com/products/umbraco-heartcore/free-intro-to-umbraco-heartcore/">{{link}}</a></li>
     </ul>
--->
 
   </div>
 </template>

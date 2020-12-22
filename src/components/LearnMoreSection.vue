@@ -5,19 +5,20 @@
             <div class="col-md-5">
               <div class="hero-content">
                 <h1 class="hero-title">
-                  Learn more about Heartstore
+                  {{APIdata.lowerTitle}}
                 </h1>
                 <p class="lead">
-                  This demo was built using Umbraco Heartcore. A headless version of the Umbraco CMS allows you to show your content on different platform with only one backoffice!
-                  That way, you can manage it one in one place and your editors will have a much easier time working with content.
+                  {{APIdata.lowerText}}
                 </p>
                 <div class="hero-btn">
-                    <button class="btn btn-outline-secondary"><router-link class="btn-blue" to="/about">About this demo</router-link></button>
+                  <!-- {{APIdata.lowerButtonLink}} - parameter to get the button link-->
+                    <button class="btn btn-outline-secondary"><router-link class="btn-blue" to="/about">{{APIdata.lowerButtonText}}</router-link></button>
                 </div>
               </div>
             </div>
             <div class="col-md-7">
                 <div>
+                  <!--{{APIdata.lowerImage.umbracoFile.src}} - parameter to get the image source-->
                     <img class="featurette-image img-fluid mx-auto" src="/images/headless_blue_arrows.png" width="360" height="360" aria-label="heartcore omnichannel">
                 </div>
             </div>
@@ -27,9 +28,24 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: "LearnMoreSection"
-};
+  name: 'LearnMoreSection',
+  data() {
+    return {
+      APIdata: [],
+    }
+  },
+    mounted() {
+    axios.get('https://cdn.umbraco.io/content/ebd19dc8-1ee7-4505-ab4d-cd0797d6a62d')
+      .then((response) => {
+        this.APIdata = response.data;
+      })
+      .catch(error => {
+        console.log(error, 'Failed getting the API data from the Home page');
+      });
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

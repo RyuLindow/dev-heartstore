@@ -1,7 +1,7 @@
 <template>
   <div class="home">
       <h1 class="featurette-heading">{{APIdata.welcomeTitle}}</h1>
-        <p class="lead">The e-commerce web app demo built with <span class="text-muted">Umbraco Heartcore</span> and <span class="text-muted">Vue.js</span></p>
+        <p class="lead">{{APIdata.welcomeText}}</p>
     <HeroSection></HeroSection>
     <LearnMoreSection></LearnMoreSection>
   </div>
