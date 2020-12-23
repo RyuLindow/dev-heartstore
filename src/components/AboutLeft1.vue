@@ -6,12 +6,13 @@
         <h2 class="featurette-heading text-align--left">{{APIdata.upperHeroTitle}}</h2>
         <p class="lead text-align--left">{{APIdata.upperHeroText}}
           <ul class="list-icon">
+            <!-- For each call for the list of upcoming demo features -->
             <li  v-for="listItem in APIdata.upperHeroListItems" :key="listItem">{{listItem}}</li>
           </ul>
         </p>
         </div>
       <div class="col-md-5 test">
-        <img class="featurette-image img-fluid mx-auto" src="/images/headless_blue_arrows.png" width="500" height="500" aria-label="arrows">
+        <img class="featurette-image img-fluid mx-auto" v-bind:src="APIdata.upperHeroImage._url" width="500" height="500" alt="arrows">
       </div>
     </div>
     

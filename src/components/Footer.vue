@@ -1,19 +1,9 @@
 <template>
   <div class="footer">
+  <!--Renders Nested links - text and links for each item-->
     <ul class="list-group">
-      <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/products/umbraco-heartcore/free-intro-to-umbraco-heartcore/">Umbraco Heartcore Live Webinar</a></li>
-      <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/try-umbraco-heartcore/">Get a free Umbraco Heartcore trial</a></li>
-      <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/blog/?tag=umbraco%20heartcore">Umbraco Heartcore Blog</a></li>
-      <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/products/umbraco-heartcore/">Umbraco Heartcore Product Page</a></li>
-      <li class="list-group-item"><a class="footer__link" href="https://umbraco.com/umbraco-heartcore-pricing/">Umbraco Heartcore Pricing</a></li>
-      <li class="list-group-item"><a class="footer__link" href="https://our.umbraco.com/documentation/Umbraco-Heartcore/">Umbraco Heartcore Documentation</a></li>
+      <li class="list-group-item"  v-for="link in APIdata.nestedLinks" :key="link"><a class="footer__link" v-bind:href="link.nestedLink">{{link.linkText}}</a></li>
     </ul>
-
-  Renders Nested Content links
-    <ul class="list-group">
-      <li class="list-group-item"  v-for="link in APIdata.nestedLinks" :key="link"><a class="footer__link" href="https://umbraco.com/products/umbraco-heartcore/free-intro-to-umbraco-heartcore/">{{link}}</a></li>
-    </ul>
-
   </div>
 </template>
 

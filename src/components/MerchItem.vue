@@ -2,54 +2,16 @@
   <div class="merch-item">
         <div class="flex">
 
-            <div class="card">
-                <img src="/images/heartcore_omnichannel.gif" class="card-img-top" alt="...">
+            <div class="card" v-for="merch in APIdata.merchList" :key="merch">
+                <img v-bind:src="merch.merchImage._url" class="card-img-top" v-bind:alt="merch.merchImageAltTag">
                 <div class="card-body">
-                    <h5 class="card-title">Umbraco Hoodie</h5>
-                    <p class="card-text">Awesome hoodie to keep you warm while you build awesome Umbraco sites!</p>
+                    <h3 class="card-title">{{merch.merchName}}</h3>
+                    <p class="card-text">{{merch.merchDescription}}</p>
+                    <h5 class="card-title">{{merch.merchPrice}}{{merch.merchPriceCurrency}}</h5>
                     <a href="#" class="btn btn-info">Add to cart</a>
                 </div>
             </div>
-            <div class="card">
-                <img src="/images/heartcore_omnichannel.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Umbraco Hoodie</h5>
-                    <p class="card-text">Awesome hoodie to keep you warm while you build awesome Umbraco sites!</p>
-                    <a href="#" class="btn btn-info">Add to cart</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/images/heartcore_omnichannel.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Umbraco Hoodie</h5>
-                    <p class="card-text">Awesome hoodie to keep you warm while you build awesome Umbraco sites!</p>
-                    <a href="#" class="btn btn-info">Add to cart</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/images/heartcore_omnichannel.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Umbraco Hoodie</h5>
-                    <p class="card-text">Awesome hoodie to keep you warm while you build awesome Umbraco sites!</p>
-                    <a href="#" class="btn btn-info">Add to cart</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/images/heartcore_omnichannel.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Umbraco Hoodie</h5>
-                    <p class="card-text">Awesome hoodie to keep you warm while you build awesome Umbraco sites!</p>
-                    <a href="#" class="btn btn-info">Add to cart</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/images/heartcore_omnichannel.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Umbraco Hoodie</h5>
-                    <p class="card-text">Awesome hoodie to keep you warm while you build awesome Umbraco sites!</p>
-                    <a href="#" class="btn btn-info">Add to cart</a>
-                </div>
-            </div>
+
             
         </div>
     </div>

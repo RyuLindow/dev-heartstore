@@ -12,14 +12,14 @@
                 </p>
                 <div class="hero-btn">
                   <!-- {{APIdata.lowerButtonLink}} - parameter to get the button link-->
-                    <button class="btn btn-outline-secondary"><router-link class="btn-blue" to="/about">{{APIdata.lowerButtonText}}</router-link></button>
+                  <button class="btn btn-outline-secondary"><router-link class="btn-white" v-bind:to="APIdata.lowerButtonLink">{{APIdata.lowerButtonText}}</router-link></button>
                 </div>
               </div>
             </div>
             <div class="col-md-7">
                 <div>
-                  <!--{{APIdata.lowerImage.umbracoFile.src}} - parameter to get the image source-->
-                    <img class="featurette-image img-fluid mx-auto" src="/images/headless_blue_arrows.png" width="360" height="360" aria-label="heartcore omnichannel">
+                  <!-- Bings the url to the image source-->
+                  <img class="featurette-image img-fluid mx-auto" v-bind:src="APIdata.lowerImage._url" width="360" height="360" alt="heartcore omnichannel">
                 </div>
             </div>
           </div>
@@ -74,18 +74,12 @@ export default {
 .btn-outline-secondary {
   background-color: $white;
   border-color: $lightblue;
+  color: $blue;
 }
 
 .btn-outline-secondary:hover {
   background-color: $beige;
   border-color: $blue;
-}
-
-.btn-blue {
-  color: $blue;
-}
-
-.btn-blue:hover {
   text-decoration: none;
 }
 </style>

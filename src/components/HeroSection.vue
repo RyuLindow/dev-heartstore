@@ -8,18 +8,18 @@
                   {{APIdata.upperTitle}}
                 </h1>
                 <p class="lead">
-                    {{APIdata.upperText}}
+                  {{APIdata.upperText}}
                 </p>
                 <div class="hero-btn">
-                  <!-- {{APIdata.upperButtonLink}} - parameter to get the button link-->
-                  <button class="btn btn-info"><router-link class="btn-white" to="/merch">{{APIdata.upperButtonText}}</router-link></button>
+                  <!-- Binds the value parameter to the button link-->
+                  <button class="btn btn-info"><router-link class="btn-white" v-bind:to="APIdata.upperButtonLink">{{APIdata.upperButtonText}}</router-link></button>
                 </div>
               </div>
             </div>
             <div class="col-md-7">
                 <div>
-                  <!--{{APIdata.upperImage.umbracoFile.src}} - parameter to get the image source-->
-                  <img class="featurette-image img-fluid mx-auto" src="/images/heartcore.gif" width="360" height="360" aria-label="">
+                  <!-- Bings the url to the image source-->
+                  <img class="featurette-image img-fluid mx-auto" v-bind:src="APIdata.upperImage._url" width="360" height="360" alt="heartcore gif">
                 </div>
             </div>
           </div>

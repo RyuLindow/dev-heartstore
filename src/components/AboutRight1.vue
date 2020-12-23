@@ -6,12 +6,14 @@
         <h2 class="featurette-heading text-align--left">{{APIdata.lowerHeroTitle}}</h2>
         <p class="lead text-align--left">{{APIdata.lowerHeroText}}
           <ul class="list-icon">
+            <!-- For each call for the list of features -->
             <li  v-for="listItem in APIdata.lowerHeroListItems" :key="listItem">{{listItem}}</li>
           </ul>
         </p>
         </div>
       <div class="col-md-5 order-md-1">
-        <img class="featurette-image img-fluid mx-auto" src="/images/heartcore_omnichannel.gif" width="500" height="500" aria-label="">
+            <!-- V-bind that renders the image source -->
+        <img class="featurette-image img-fluid mx-auto" v-bind:src="APIdata.lowerHeroImage._url" width="500" height="500" alt="">
       </div>
     </div>
   </div>
