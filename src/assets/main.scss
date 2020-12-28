@@ -1,8 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 @import "/src/assets/vars.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body{
     background-color: $beige;
+}
+
+p, h1, h2, h3, h4, h5, li, a {
+  font-family: 'Lato', sans-serif;
 }
 
 .clickable {
