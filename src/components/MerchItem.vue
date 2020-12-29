@@ -2,7 +2,7 @@
   <div class="merch-item">
         <div class="flex">
 
-            <div class="card" v-for="merch in APIdata.merchList" :key="merch">
+            <div class="card zoom" v-for="merch in APIdata.merchList" :key="merch">
                 <img v-bind:src="merch.merchImage._url" class="card-img-top" v-bind:alt="merch.merchImageAltTag">
                 <div class="card-body">
                     <h3 class="card-title">{{merch.merchName}}</h3>
@@ -60,6 +60,14 @@ export default {
 .card {
     width: 24rem;
     margin: 4rem 2rem 0 2rem;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
 }
 
 </style>
