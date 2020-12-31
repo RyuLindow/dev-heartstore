@@ -2,7 +2,7 @@
     <div class="mainnav">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <router-link to="/"><img class="logo-image" src="/images/heartstore_logo.png" alt="heartcore logo gif"></router-link>
+                <router-link to="/"><img class="logo-image" src="/images/heartstore_logo.png" alt="heartcore logo"></router-link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" alt="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>

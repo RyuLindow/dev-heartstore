@@ -15,7 +15,7 @@ p, h1, h2, h3, h4, h5, li, a {
 }
 
 
-/*GENERAL REUSABLE STYLING CLASSES*/
+//GENERAL REUSABLE STYLING CLASSES//
 
 .text-align--left {
   text-align: left;
@@ -36,7 +36,7 @@ p, h1, h2, h3, h4, h5, li, a {
 }
 
 
-/*ABOUT PAGE*/
+//ABOUT PAGE//
 
 .about-section {
     margin: 0 18%;
@@ -64,11 +64,8 @@ p, h1, h2, h3, h4, h5, li, a {
   color: $blue !important;
 }
 
-
   
-  
-/* RESPONSIVE CSS
--------------------------------------------------- */
+//RESPONSIVE CSS//
   
 @media (min-width: 40em) {
   

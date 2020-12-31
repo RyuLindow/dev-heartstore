@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-7">
                 <div>
-                  <!-- Bings the url to the image source-->
+                  <!-- Binds the url to the image source-->
                   <img class="featurette-image img-fluid mx-auto" v-bind:src="APIdata.upperImage._url" width="360" height="360" alt="heartcore gif">
                 </div>
             </div>

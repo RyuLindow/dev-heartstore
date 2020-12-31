@@ -11,14 +11,14 @@
                   {{APIdata.lowerText}}
                 </p>
                 <div class="hero-btn">
-                  <!-- {{APIdata.lowerButtonLink}} - parameter to get the button link-->
+                  <!-- Binds the value parameter to the button link-->
                   <button class="btn btn-outline-secondary"><router-link class="btn-white" v-bind:to="APIdata.lowerButtonLink">{{APIdata.lowerButtonText}}</router-link></button>
                 </div>
               </div>
             </div>
             <div class="col-md-7">
                 <div>
-                  <!-- Bings the url to the image source-->
+                  <!-- Binds the url to the image source-->
                   <img class="featurette-image img-fluid mx-auto" v-bind:src="APIdata.lowerImage._url" width="360" height="360" alt="heartcore omnichannel">
                 </div>
             </div>
