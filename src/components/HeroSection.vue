@@ -4,12 +4,8 @@
           <div class="row h-100 justify-content-center align-items-center">
             <div class="col-md-5">
               <div class="hero-content">
-                <h1 class="hero-title">
-                  {{APIdata.upperTitle}}
-                </h1>
-                <p class="lead">
-                  {{APIdata.upperText}}
-                </p>
+                <h1 class="hero-title" v-html="APIdata.upperTitle"></h1>
+                <p class="lead" v-html="APIdata.upperText"></p>
                 <div class="hero-btn">
                   <!-- Binds the value parameter to the button link-->
                   <button class="btn btn-info"><router-link class="btn-white" v-bind:to="APIdata.upperButtonLink">{{APIdata.upperButtonText}}</router-link></button>

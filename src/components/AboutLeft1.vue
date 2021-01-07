@@ -3,11 +3,11 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading text-align--left">{{APIdata.upperHeroTitle}}</h2>
-        <p class="lead text-align--left">{{APIdata.upperHeroText}}
+        <h2 class="featurette-heading text-align--left" v-html="APIdata.upperHeroTitle"></h2>
+        <p class="lead text-align--left" v-html="APIdata.upperHeroText">
           <ul class="list-icon">
             <!-- For each call for the list of upcoming demo features -->
-            <li  v-for="listItem in APIdata.upperHeroListItems" :key="listItem">{{listItem}}</li>
+            <li v-for="listItem in APIdata.upperHeroListItems" :key="listItem" v-html="APIdata.upperHeroText">{{}}</li>
           </ul>
         </p>
         </div>
@@ -15,7 +15,6 @@
         <img class="featurette-image img-fluid mx-auto" v-bind:src="APIdata.upperHeroImage._url" width="500" height="500" alt="arrows">
       </div>
     </div>
-    
   </div>
 </template>
 

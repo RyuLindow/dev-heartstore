@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-      <h1 class="featurette-heading">{{APIdata.welcomeTitle}}</h1>
-        <p class="lead">{{APIdata.welcomeText}}</p>
+    <!--The v-html allows for rendering content from the Rich text editor as html instead of a string which means that styling classes added to text in the backoffice are rendered on the frontend-->
+      <h1 class="featurette-heading" v-html="APIdata.welcomeTitle"></h1>
+      <p class="lead" v-html="APIdata.welcomeText"></p>
     <HeroSection></HeroSection>
     <LearnMoreSection></LearnMoreSection>
   </div>

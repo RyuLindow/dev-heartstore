@@ -1,12 +1,10 @@
 <template>
   <div class="merch">
     <div class="merch-section">
-        <h1 class="featurette-heading">{{APIdata.welcomeTitle}}</h1>
-        <p class="lead">{{APIdata.welcomeText}}
-        </p>
-
+      <h1 class="featurette-heading" v-html="APIdata.welcomeTitle"></h1>
+      <p class="lead" v-html="APIdata.welcomeText"></p>
     <MerchItem></MerchItem>
-        </div>
+    </div>
   </div>
 </template>
 
