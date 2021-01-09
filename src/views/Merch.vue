@@ -11,7 +11,7 @@
 
 <script>
 import axios from 'axios'
-import MerchItem from '@/components/MerchItem.vue'
+import MerchItem from '@/components/Merch/MerchItem.vue'
 export default {
   name: 'Merch',
   components: {

@@ -1,21 +1,21 @@
 <template>
   <div class="about">
-    <AboutLeft1></AboutLeft1>
-    <AboutRight1></AboutRight1>
+    <Left></Left>
+    <Right></Right>
   </div>
 </template>
 
 
 <script>
 import axios from 'axios'
-import AboutLeft1 from '@/components/AboutLeft1.vue'
-import AboutRight1 from '@/components/AboutRight1.vue'
+import Left from '@/components/About/Left.vue'
+import Right from '@/components/About/Right.vue'
 
 export default {
   name: 'About',
   components: {
-    AboutLeft1,
-    AboutRight1
+    Left,
+    Right
   },
     mounted() {
     axios.get('https://cdn.umbraco.io/content/4ca57f73-a25e-44da-be9c-489fee1c5c03')

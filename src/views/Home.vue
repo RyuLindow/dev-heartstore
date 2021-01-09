@@ -3,22 +3,22 @@
     <!--The v-html allows for rendering content from the Rich text editor as html instead of a string which means that styling classes added to text in the backoffice are rendered on the frontend-->
       <h1 class="featurette-heading" v-html="APIdata.welcomeTitle"></h1>
       <p class="lead" v-html="APIdata.welcomeText"></p>
-    <HeroSection></HeroSection>
-    <LearnMoreSection></LearnMoreSection>
+    <Hero></Hero>
+    <LearnMore></LearnMore>
   </div>
 </template>
 
 
 <script>
 import axios from 'axios'
-import HeroSection from '@/components/HeroSection.vue'
-import LearnMoreSection from '@/components/LearnMoreSection.vue'
+import Hero from '@/components/Home/Hero.vue'
+import LearnMore from '@/components/Home/LearnMore.vue'
 
 export default {
   name: 'Home',
   components: {
-    HeroSection,
-    LearnMoreSection
+    Hero,
+    LearnMore
   },
   data() {
     return {

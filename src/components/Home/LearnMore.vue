@@ -26,7 +26,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'LearnMoreSection',
+  name: 'LearnMore',
   data() {
     return {
       APIdata: [],

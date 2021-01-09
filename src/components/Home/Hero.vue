@@ -26,7 +26,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'HeroSection',
+  name: 'Hero',
   data() {
     return {
       APIdata: [],

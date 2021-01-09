@@ -21,7 +21,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'AboutLeft1',
+  name: 'Left',
   data() {
     return {
       APIdata: [],
