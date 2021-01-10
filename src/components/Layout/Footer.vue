@@ -2,7 +2,9 @@
   <div class="footer">
   <!--Renders Nested links - text and links for each item-->
     <ul class="list-group">
-      <li class="list-group-item"  v-for="link in APIdata.nestedLinks" :key="link"><a class="footer__link" v-bind:href="link.nestedLink">{{link.linkText}}</a></li>
+      <li class="list-group-item" v-for="link in APIdata.nestedLinks" :key="link">
+        <a class="footer__link" v-bind:href="link.nestedLink">{{link.linkText}}</a>
+      </li>
     </ul>
   </div>
 </template>

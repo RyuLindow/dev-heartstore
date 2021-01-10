@@ -18,6 +18,9 @@
                     <li class="nav-item clickable">
                         <router-link to="/about" class="nav-link nav-item">About this demo</router-link>
                     </li>
+                    <li class="nav-item clickable">
+                        <router-link to="/blog" class="nav-link nav-item">Blog</router-link>
+                    </li>
                 </ul>
                 </div>
             </div>
@@ -69,7 +72,7 @@ export default {
     text-decoration: none;
 }
 
- .nav-item{
+.nav-item{
     color: $lightblue !important; 
 }
 
