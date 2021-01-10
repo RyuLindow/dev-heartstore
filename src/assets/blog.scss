@@ -165,6 +165,13 @@ p{
     width: 100%;
 }
 
+.hidden {
+    display: none;
+}
+.shown {
+    display: inline;
+}
+
 .card-title{
     font-weight: 700;
 }

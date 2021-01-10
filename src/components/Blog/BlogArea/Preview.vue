@@ -3,8 +3,9 @@
 <div class="column is-12-mobile is-12-tablet is-8-desktop">
     <div class="cards is-two"> 
 
-        <div class="card" v-for="preview in PreviewData.content" :key="preview">
-            <!--Add the toggle for the "is-featured" class later-->
+        <div class="card" v-for="preview in PreviewData.content" :key="preview"
+        :class="{isFeatured:preview.isFeatured}">
+<!--Binds the isFeatured class which can be then toggled in the backoffice, as the API result for isFeatured can be either true or false-->
                      
             <div class="card-content">
                 <a href="#">
@@ -24,7 +25,12 @@
                             <div class="card-meta">
                                 <div class="is-faded">January, 9th 2021</div>
                                 <div class="card-extra">
-                                    <span class="card-special">Hot story 🔥</span>
+                                    <span class="card-special hidden"
+                                    :class="{shown:preview.isFeatured}">
+<!--this span is hidden by default is only visible on the featured blog article-->
+
+                                        Hot right now 🔥
+                                    </span>
                                     <span>{{preview.readTime}} min. read</span>
 
                                 </div>
