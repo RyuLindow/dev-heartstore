@@ -29,7 +29,7 @@ export default {
         console.log(response.data)
       })
       .catch(error => {
-        console.log(error, 'Failed getting the API data from the Home page');
+        console.log(error, 'Failed getting the API data');
       });
   }
 }
