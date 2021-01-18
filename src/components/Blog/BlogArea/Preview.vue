@@ -8,13 +8,12 @@
 <!--Binds the isFeatured class which can be then toggled in the backoffice, as the API result for isFeatured can be either true or false-->
                      
             <div class="card-content">
-                <a href="#">
+                <router-link to="/post">
                     <figure><img v-bind:src="preview.hero._url" v-bind:alt="preview.hero.name" class="card-image"></figure>
-                </a>
+                </router-link>
 
                 <div class="card-content">
-                    <a href="#"></a>
-                    <a href="#">
+                    <router-link to="/post">
                         <div class="card-inner">
                             <div class="card-description">
                                 <h3 class="card-title">{{preview.name}}</h3>
@@ -36,7 +35,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>

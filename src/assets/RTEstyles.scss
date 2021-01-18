@@ -1,0 +1,20 @@
+.text-muted {
+    color: $lightblue !important;
+}
+  
+.text-highlighted {
+    color: $blue !important;
+}
+.list-icon {
+    list-style-type: none;
+    margin-top: 2rem;
+}
+  
+.list-icon li::before {
+    content: url('/images/heartcore.ico');
+    margin-right: 0.4rem;
+}
+
+.image-description {
+    font-size: 0.7rem;
+}

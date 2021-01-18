@@ -7,7 +7,7 @@
         <p class="lead text-align--left" v-html="APIdata.upperHeroText">
           <ul class="list-icon">
             <!-- For each call for the list of upcoming demo features -->
-            <li v-for="listItem in APIdata.upperHeroListItems" :key="listItem" v-html="APIdata.upperHeroText">{{}}</li>
+            <li v-for="listItem in APIdata.upperHeroListItems" :key="listItem" v-html="APIdata.upperHeroText"></li>
           </ul>
         </p>
         </div>

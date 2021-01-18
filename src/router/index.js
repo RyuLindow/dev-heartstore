@@ -1,6 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Merch from "../views/Merch.vue";
+import About from "../views/About.vue";
+import Blog from "../views/Blog.vue";
+import Post from "../views/BlogPost.vue";
 
 
 Vue.use(VueRouter);
@@ -14,23 +18,23 @@ const routes = [
   {
     path: "/merch",
     name: "Merch",
-    // route level code-splitting
-    // this generates a separate chunk (merch.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "merch" */ "../views/Merch.vue")
+    component: Merch
   },
   {
     path: "/about",
     name: "About",
-    component: () =>
-      import("../views/About.vue")
+    component: About
   },
   {
     path: "/blog",
     name: "Blog",
-    component: () =>
-      import("../views/Blog.vue")
+    component: Blog
+  },
+  {
+    //fix blog post routing
+    path: "/post",
+    name: "Post",
+    component: Post
   }
 
 ];

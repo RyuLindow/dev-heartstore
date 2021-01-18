@@ -80,4 +80,23 @@ export default {
     color: $blue !important;
     font-size: 1.2rem;
 }
+
+
+@media (max-width: 1024px){
+    .logo-image {
+        width: 20vh;
+    }
+}
+
+@media (max-width:600px){
+    .logo-image {
+        width: 16vh;
+    }
+}
+
+@media (max-width:480px){
+    .logo-image {
+        width: 14vh;
+    }
+}
 </style>
