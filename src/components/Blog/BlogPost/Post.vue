@@ -22,7 +22,7 @@
                         <div class="content">
 
                           <div class="blogpost-teaser">
-                            <h2>{{PostData.headline}}</h2>
+                            <h2>{{GraphQLdata.headline}}</h2>
                           </div>
 
                           <div class="umb-grid">
@@ -31,7 +31,7 @@
                                 <div class="column is-12 grid-section__cell">
                                   <div class="content grid-section__cell-content">
 
-                                    <p v-html="PostData.bodyText"></p>
+                                    <p v-html="GraphQLdata.bodyText"></p>
 
                                   </div>
                                 </div>
@@ -44,7 +44,7 @@
                     </div>
 
                   <Sidebar></Sidebar>
-
+                  
               </div>
             </div>
           </div>
@@ -64,7 +64,8 @@ export default {
   },
   data() {
     return {
-      PostData: [],
+      PostData: [], //REST API data root
+      GraphQLdata: [] //GraphQL API dataroot
     }
   },
     mounted() {
@@ -75,7 +76,34 @@ export default {
       .catch(error => {
         console.log(error, 'Failed getting the API data');
       });
-  }
+
+//GraphQL POST call to the GraphQL demo article start
+      axios({
+      url: 'https://graphql.umbraco.io',
+      headers: {
+      "umb-project-alias": "dev-heartstore",
+      },
+      method: "post",
+      data: {
+        query: `
+          {
+            content(url: "/home/blog-area/new-hire-darek-szatkowski/") {
+              ... on BlogArticle {
+                headline
+                bodyText
+              }
+            }
+          }
+        `
+      }
+    })
+    .then((result) => {
+      this.GraphQLdata = result.data.data.content;
+      console.log(result.data.data.content)
+    });
+//GraphQL POST call to the GraphQL demo article end
+
+  },
 }
 </script>
 

@@ -31,7 +31,6 @@ const routes = [
     component: Blog
   },
   {
-    //fix blog post routing
     path: "/post",
     name: "Post",
     component: Post
