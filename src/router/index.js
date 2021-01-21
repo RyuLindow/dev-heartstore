@@ -5,6 +5,7 @@ import Merch from "../views/Merch.vue";
 import About from "../views/About.vue";
 import Blog from "../views/Blog.vue";
 import Post from "../views/BlogPost.vue";
+import GraphQLpost from "../views/GraphQLpost.vue";
 
 
 Vue.use(VueRouter);
@@ -34,6 +35,11 @@ const routes = [
     path: "/post",
     name: "Post",
     component: Post
+  },
+  {
+    path: "/graphql",
+    name: "GraphQLpost",
+    component: GraphQLpost
   }
 
 ];
