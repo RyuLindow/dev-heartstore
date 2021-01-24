@@ -3,7 +3,7 @@
     <div class="sidebar">
       <ul class="list">
         <li>
-          <strong>Published</strong>: January 07, 2020
+          <strong>Published</strong>: {{SidebarData.hero.createDate.split("T")[0]}}
         </li>
         <li>
           <strong>Read time</strong>: {{SidebarData.readTime}} min. read
@@ -48,6 +48,9 @@ export default {
                 readTime
                 categories
                 tags
+                hero {
+                  createDate
+                }
               }
             }
           }
@@ -61,6 +64,9 @@ export default {
 //GraphQL POST call to the GraphQL demo article end
   }
 }
+
+
+
 </script>
 
 <style scoped lang="scss">

@@ -3,7 +3,7 @@
     <div class="sidebar">
       <ul class="list">
         <li>
-          <strong>Published</strong>: January 07, 2020
+          <strong>Published</strong>: {{SidebarData._updateDate.split("T")[0]}}
         </li>
         <li>
           <strong>Read time</strong>: {{SidebarData.readTime}} min. read

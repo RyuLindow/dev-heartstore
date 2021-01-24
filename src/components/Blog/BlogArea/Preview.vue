@@ -22,7 +22,7 @@
                                     </p>
                             </div>
                             <div class="card-meta">
-                                <div class="is-faded">January, 9th 2021</div>
+                                <div class="is-faded">{{preview._updateDate.split("T")[0]}}</div>
                                 <div class="card-extra">
                                     <span class="card-special hidden"
                                     :class="{shown:preview.isFeatured}">
