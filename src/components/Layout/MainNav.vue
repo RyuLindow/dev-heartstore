@@ -24,6 +24,9 @@
                     <li class="nav-item clickable">
                         <router-link to="/graphql" class="nav-link nav-item">GraphQL</router-link>
                     </li>
+                    <li class="nav-item clickable">
+                        <router-link to="/contact" class="nav-link nav-item">Book a demo</router-link>
+                    </li>
                 </ul>
                 </div>
             </div>

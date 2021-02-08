@@ -36,9 +36,6 @@ export default {
 //GraphQL POST call to the GraphQL demo article start
       axios({
       url: 'https://graphql.umbraco.io',
-      headers: {
-      "umb-project-alias": "dev-heartstore",
-      },
       method: "post",
       data: {
         query: `

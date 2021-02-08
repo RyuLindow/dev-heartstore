@@ -12,7 +12,8 @@ import axios from 'axios'
 axios.defaults.headers.get['umb-project-alias'] = 'dev-heartstore'
 axios.defaults.headers.get['Accept-Language'] = 'en-US'
 
-
+axios.defaults.headers.post['umb-project-alias'] = 'dev-heartstore'
+axios.defaults.headers.post['Authorization'] = 'Basic bVFyaVpKTmxobTNSZ2RnZTgxOVo6'
 
 
 window.axios = require('axios');

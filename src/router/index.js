@@ -6,6 +6,8 @@ import About from "../views/About.vue";
 import Blog from "../views/Blog.vue";
 import Post from "../views/BlogPost.vue";
 import GraphQLpost from "../views/GraphQLpost.vue";
+import Contact from "../views/Contact.vue";
+import Test from "../views/Test.vue";
 
 
 Vue.use(VueRouter);
@@ -40,6 +42,16 @@ const routes = [
     path: "/graphql",
     name: "GraphQLpost",
     component: GraphQLpost
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact
+  },
+  {
+    path: "/test",
+    name: "Test",
+    component: Test
   }
 
 ];
