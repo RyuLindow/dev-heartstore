@@ -8,7 +8,7 @@
                     <h3 class="card-title">{{merch.merchName}}</h3>
                     <p class="card-text">{{merch.merchDescription}}</p>
                     <h5 class="card-title">{{merch.merchPrice}}{{merch.merchPriceCurrency}}</h5>
-                    <a href="#" class="btn btn-info">Check it out!</a>
+                    <a href="#" class="btn btn-info">Check it out 😎</a>
                 </div>
             </div>
 
